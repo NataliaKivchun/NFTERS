@@ -1,0 +1,42 @@
+html {
+  font-size: $root-font-size;
+  font-family: $regular-font-family;
+}
+
+body {
+  background-color: $body-background-color;
+}
+
+section {
+  //padding: $section-padding;
+  scroll-margin-top: 2rem;
+  &:nth-of-type(even) {
+    background-color: $background-light-grey;
+  }
+}
+
+.main {
+  //padding-top: $header-height;
+}
+
+h1 {
+  @extend %large-text;
+  @include font-weight-font-size(400, 2.5rem);
+}
+
+h2 {
+  @extend %large-text;
+  @include font-weight-font-size(700, 1.8rem);
+}
+
+h3 {
+  @include font-weight-font-size(700, 1.75rem);
+}
+
+h4 {
+  @include font-weight-font-size(700, 1.25rem);
+}
+
+h5 {
+  @include font-weight-font-size(500, 1rem);
+}

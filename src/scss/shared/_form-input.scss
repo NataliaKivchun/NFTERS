@@ -1,0 +1,13 @@
+.form-input {
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: $grey;
+  border: 2px solid $grey;
+  border-radius: 100px;
+  &:focus ~ .label-content {
+    visibility: hidden;
+    background-color: transparent;
+  }
+}

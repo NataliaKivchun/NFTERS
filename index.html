@@ -58,31 +58,55 @@
           </ul>
         </nav>
 
+        <input
+          class="header__drop-menu-btn"
+          type="checkbox"
+          id="drop-menu-btn"
+          name="drop-menu-btn"
+          aria-label="Drop menu"
+        />
+        <label class="header__drop-menu-label" for="drop-menu-btn">
+          <img
+            src="./src/assets/icons/drop-menu-icon.svg"
+            alt="Drop menu icon"
+            class="header__drop-menu-icon"
+          />
+        </label>
+
         <label
-          class="header__search-form-label"
+          class="header__search-form-label form-label"
           for="search-form"
           aria-label="Search form"
         >
           <input
-            class="header__search-form"
+            class="header__search-form form-input"
             type="search"
             id="search-form"
             name="search-form"
-            placeholder="Search"
             autocomplete="on"
           />
-          <span class="header__search-form-text">Search</span>
+          <span class="header__search-form-text label-content">Search</span>
           <img
             class="header__search-form-icon"
-            src="./src/assets/"
+            src="./src/assets/icons/search-icon.svg"
             alt="Search icon"
           />
         </label>
 
-        <button class="" type="button" role="button" aria-label="Upload">
+        <button
+          class="header__button first-type-button"
+          type="button"
+          aria-label="Upload"
+        >
           Upload
         </button>
-        <button class="" type="button">Connect Wallet</button>
+        <button
+          class="header__button second-type-button"
+          type="button"
+          aria-label="Connect Wallet"
+        >
+          Connect Wallet
+        </button>
       </div>
     </header>
     <main class="main">
@@ -96,7 +120,7 @@
               Digital marketplace for crypto collectibles and non-fungible
               tokens (NFTs). Buy, Sell, and discover exclusive digital assets.
             </p>
-            <button type="button">Explore Now</button>
+            <button class="first-type-button" type="button">Explore Now</button>
             <div class="banner__statistic">
               <div class="banner__statistic-item">
                 <p class="banner__statistic-item-number">98k+</p>
@@ -128,7 +152,11 @@
                 <div class="banner__auction-info">
                   <p class="banner__auction-info-title">Current Bid</p>
                   <div class="bid-count-info">
-                    <img src="" alt="Bid icon" class="bid-count-info__img" />
+                    <img
+                      src="./src/assets/icons/bid.svg"
+                      alt="Bid icon"
+                      class="bid-count-info__img"
+                    />
                     <span class="bid-count-info__number">0.25 ETH</span>
                   </div>
                 </div>
@@ -1332,15 +1360,19 @@
               releases, NFT drops, and tips and tricks for navigating NFTs.
             </p>
             <form class="footer__subscribe-form" action="">
-              <input
-                class="footer__subscribe-input"
-                id="subscribe-form-input"
-                type="email"
-              />
-              <label class="footer__subscribe-label" for="subscribe-form-input"
-                >Enter your email address..</label
+              <label
+                class="footer__subscribe-label form-label"
+                for="subscribe-form-input"
               >
-              <button type="submit">Subscribe Now</button>
+                <input
+                  class="footer__subscribe-input form-input"
+                  id="subscribe-form-input"
+                  type="email"
+                /><button type="submit">Subscribe Now</button>
+                <span class="footer__subscribe-form-text label-content"
+                  >Enter your email address..</span
+                ></label
+              >
             </form>
           </div>
         </div>

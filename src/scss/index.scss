@@ -1,6 +1,15 @@
 @import "variables/colors";
 @import "variables/fonts";
 @import "templates/large-text";
+@import "templates/elem-outline";
 @import "mixins/font-weight-font-size";
 @import "config/reset";
-@import "config/config"
+@import "config/config";
+@import "shared/container";
+@import "shared/form-label";
+@import "shared/form-input";
+@import "shared/first-type-button";
+@import "shared/second-type-button";
+@import "shared/label-content";
+@import "components/header";
+@import "components/bid-count-info";

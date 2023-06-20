@@ -8,15 +8,11 @@ body {
 }
 
 section {
-  //padding: $section-padding;
-  scroll-margin-top: 2rem;
+  padding: $section-padding;
+  scroll-margin-top: 4rem;
   &:nth-of-type(even) {
     background-color: $background-light-grey;
   }
-}
-
-.main {
-  padding-top: 4.5rem;
 }
 
 h1 {

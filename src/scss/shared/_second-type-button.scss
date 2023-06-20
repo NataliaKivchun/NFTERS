@@ -1,9 +1,10 @@
 .second-type-button {
-  padding: 1rem 2rem;
+  padding: $second-type-button-padding;
   color: $indigo;
   background-color: white;
   border: 2px solid $indigo;
   border-radius: 60px;
+  transition: 0.3s;
   &:hover {
     color: white;
     background: $indigo;

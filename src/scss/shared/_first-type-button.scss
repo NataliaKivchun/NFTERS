@@ -1,9 +1,10 @@
 .first-type-button {
-  padding: 1rem 2rem;
+  padding: $first-type-button-padding;
   color: white;
   background: $indigo;
   border: 2px solid $indigo;
   border-radius: 60px;
+  transition: 0.3s;
   &:hover {
     color: $indigo;
     background-color: white;

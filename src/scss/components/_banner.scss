@@ -1,0 +1,195 @@
+.banner {
+  & .container {
+    display: flex;
+    @media (min-width: $tablet-screen) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 3rem;
+    }
+    @media (min-width: $laptop-screen) {
+      flex-direction: row;
+      column-gap: 3rem;
+    }
+  }
+
+  &__text-content {
+    position: relative;
+    display: flex;
+    z-index: 2;
+    min-width: 50%;
+  }
+
+  &__dots-img {
+    position: absolute;
+    bottom: 1rem;
+    left: -3.3rem;
+  }
+
+  &__text-content-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    @media (min-width: $laptop-screen) {
+        display: block;
+        text-align: left;
+    }
+  }
+
+  &__description {
+    width: 70%;
+    margin-top: 1rem;
+    color: $grey;
+    line-height: 1.6;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    @include font-weight-font-size(500, 1.25rem);
+  }
+
+  &__statistic {
+    display: flex;
+    column-gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  &__statistic-item-number {
+    @extend %large-text;
+    @include font-weight-font-size(700, 2.5rem);
+  }
+
+  &__statistic-item-title {
+    @include font-weight-font-size(500, 1.25rem);
+    color: $grey;
+  }
+
+  &__auction-content {
+    display: none;
+    @media (min-width: $tablet-screen) {
+      display: block;
+      min-width: 50%;
+      min-height: 440px;
+    }
+  }
+
+  &__auction-item {
+    display: flex;
+    position: relative;
+  }
+
+  &__auction-emblem {
+    position: absolute;
+    left: -69px;
+    top: 180px;
+    z-index: 6;
+  }
+
+  &__first-auction-nft {
+    position: absolute;
+    height: 440px;
+    width: 400px;
+    z-index: 4;
+  }
+
+  &__first-auction-nft-img {
+    position: absolute;
+    z-index: 4;
+  }
+
+  &__first-auction-nft-about {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    top: 1.6rem;
+    left: 1.6rem;
+    color: white;
+    z-index: 5;
+  }
+
+  &__auction-item-author {
+    display: flex;
+    align-items: center;
+    column-gap: 5%;
+  }
+
+  &__auction-info-panel {
+    position: absolute;
+    display: flex;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 12px;
+    justify-content: space-between;
+    color: white;
+    margin-top: auto;
+    left: 1.6rem;
+    right: 1.6rem;
+    bottom: 1.5rem;
+    z-index: 5;
+  }
+
+  &__auction-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.45rem;
+  }
+
+  &__auction-info-title {
+    @include font-weight-font-size(500, 0.75rem);
+  }
+
+  &__auction-info-number {
+    font-weight: 700;
+  }
+
+  &__auction-info-number--font-weight-normal {
+    font-weight: 400;
+  }
+
+  &__second-auction-nft {
+    position: absolute;
+    height: 392px;
+    width: 356px;
+    top: 1.5rem;
+    left: 5rem;
+    z-index: 3;
+  }
+
+  &__second-auction-nft-img {
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__third-auction-nft {
+    position: absolute;
+    height: 340px;
+    width: 310px;
+    top: 3.15rem;
+    left: 9.8rem;
+    z-index: 2;
+  }
+}
+
+/*
+.banner__auction-content {
+}
+.banner
+.banner
+.banner__auction-item-title {
+}
+.banner
+.banner__auction-item-author-avatar {
+}
+.banner__auction-item-author-name {
+}
+.banner__auction-info-panel {
+}
+.banner__auction-info {
+}
+.banner__auction-info-title {
+}
+.banner__auction-info-number--font-weight-normal {
+}*/

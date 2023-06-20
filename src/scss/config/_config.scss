@@ -7,11 +7,18 @@ body {
   background-color: $body-background-color;
 }
 
+main {
+  padding-top: 4.5rem;
+}
+
 section {
-  padding: $section-padding;
+  padding: $section-padding-tablet;
   scroll-margin-top: 4rem;
   &:nth-of-type(even) {
     background-color: $background-light-grey;
+  }
+  @media (min-width: $laptop-screen) {
+    padding: $section-padding;
   }
 }
 

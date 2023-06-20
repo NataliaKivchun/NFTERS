@@ -1,7 +1,7 @@
 .label-content {
   position: absolute;
   background: transparent;
-  top: 1rem;
+  top: calc(50% - 0.7rem);
   left: 2rem;
   color: $grey;
 }

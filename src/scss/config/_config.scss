@@ -1,6 +1,9 @@
 html {
-  font-size: $root-font-size;
+  font-size: $root-font-size-min;
   font-family: $regular-font-family;
+  @media (min-width: $laptop-screen) {
+    font-size: $root-font-size;
+  }
 }
 
 body {

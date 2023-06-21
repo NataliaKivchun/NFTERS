@@ -1,6 +1,9 @@
 .bid-count-info {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
   &__img {
-    color: $green;
+    color: inherit;
   }
 
   &__number {

@@ -112,7 +112,7 @@ h1 {
 
 h2 {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -818,6 +818,7 @@ input[type=search]::-webkit-search-cancel-button {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    padding-bottom: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -842,6 +843,7 @@ input[type=search]::-webkit-search-cancel-button {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 2.5rem;
+    padding-bottom: 0;
   }
 }
 .top-collections__other-nft {
@@ -1007,26 +1009,77 @@ input[type=search]::-webkit-search-cancel-button {
   color: #ff002e;
 }
 
-/*
 .collection__title {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+@media (min-width: 885px) {
+  .collection__title {
+    text-align: left;
+  }
 }
 .collection__collections-list {
-}
-.collection__collections-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 2rem;
+  justify-items: center;
 }
 .collection__collections-item-imgs {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
 }
 .collection__collections-item-main-img {
+  grid-column: span 5;
 }
-.collection__collections-item-other-img {
+.collection__collections-item-other-imgs {
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5rem;
 }
 .collection__collections-item-info {
-}
-.collection__collections-item-title {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5rem;
 }
 .collection__collections-item-subinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .collection__collections-item-author-img {
+  width: 28px;
+  height: 28px;
+  padding-right: 0.5rem;
 }
 .collection__collections-item-author-name {
-}*/
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+.collection__button {
+  font-size: 0.75rem;
+  margin-left: auto;
+  padding: 0.4rem 0.75rem;
+}

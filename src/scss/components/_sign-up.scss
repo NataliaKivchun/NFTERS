@@ -1,0 +1,72 @@
+.sign-up {
+  & .container {
+    @media (min-width: $tablet-screen) {
+      display: flex;
+      column-gap: 5rem;
+    }
+  }
+
+  &__images {
+    display: none;
+    @media (min-width: $tablet-screen) {
+      min-width: 50%;
+      max-width: 60%;
+      display: flex;
+      align-items: center;
+      column-gap: 4rem;
+      padding-bottom: 40px;
+      justify-content: space-between;
+      & > .sign-up__img-box {
+        width: 47%;
+      }
+    }
+  }
+
+  &__left-images {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: flex-end;
+  }
+
+  &__img-box {
+    position: relative;
+    &:first-child::after {
+      position: absolute;
+      content: url(../../assets/icons/sign-up-avatar-1.svg);
+      bottom: -40px;
+      right: -40px;
+    }
+    &:last-child::after {
+      position: absolute;
+      content: url(../../assets/icons/sign-up-avatar-2.svg);
+      bottom: -40px;
+      right: -40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (min-width: $tablet-screen) {
+      max-width: 50%;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__description {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    color: $grey;
+    @include font-weight-font-size(400, 1.13rem);
+    line-height: 1.6;
+  }
+}

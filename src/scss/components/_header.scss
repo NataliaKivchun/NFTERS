@@ -88,6 +88,12 @@
     }
   }
 
+  &__navigation-list-link {
+    &:hover {
+      border-bottom: 2px solid $indigo;
+    }
+  }
+
   &__drop-menu-label {
     position: relative;
     cursor: pointer;

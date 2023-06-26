@@ -71,8 +71,23 @@ a {
   &:focus {
     @extend %elem-outline;
   }
+  transition: 0.3s;
 }
 
 address {
   font-style: normal;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  &:focus {
+    @extend %elem-outline;
+    outline-color: transparent;
+  }
 }

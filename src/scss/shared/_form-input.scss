@@ -5,8 +5,23 @@
   padding: $input-padding;
   color: $grey;
   border-radius: 100px;
-  &:focus ~ .label-content {
+  &::placeholder {
+    color: $grey;
+    font-size: 90%;
+  }
+  &:focus::placeholder {
     visibility: hidden;
-    background-color: transparent;
+  }
+  &:placeholder-shown {
+    visibility: visible;
+  }
+  &:placeholder-shown:focus ~ .label-content,
+  &:not(:placeholder-shown) ~ .label-content {
+    top: -7px;
+    opacity: 1;
+    font-size: 85%;
+    color: $indigo;
+    visibility: visible;
+    font-weight: 500;
   }
 }

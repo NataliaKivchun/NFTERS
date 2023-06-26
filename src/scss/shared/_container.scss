@@ -1,6 +1,9 @@
 .container {
-  padding: 0 25px;
+  padding: 0 15px;
   margin: 0 auto;
+  @media (min-width: $mobile-portrait-screen-mini) {
+    padding: 0 25px;
+  }
   @media (min-width: 1281px) {
     padding: 0 15px;
     max-width: 1200px;

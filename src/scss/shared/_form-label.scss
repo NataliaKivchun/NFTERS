@@ -1,8 +1,10 @@
 .form-label {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   position: relative;
   border: 2px solid $grey;
   border-radius: 100px;
   align-items: center;
+  transition: 0.2s;
 }

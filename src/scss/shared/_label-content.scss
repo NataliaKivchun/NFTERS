@@ -1,7 +1,10 @@
 .label-content {
   position: absolute;
-  background: transparent;
+  background: white;
   top: calc(50% - 0.6rem);
-  left: 2rem;
+  left: 1.5rem;
   color: $grey;
+  transition: 0.2s;
+  visibility: hidden;
+  padding: 0 5px;
 }

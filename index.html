@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NFTERS</title>
+    <link rel="icon" href="./src/assets/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +16,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="header__logo-link" href="#banner">
+        <a class="header__logo-link" href="#banner" aria-label="Logotype">
           <p class="header__logo-text">NFters</p>
         </a>
         <nav class="header__navigation">
@@ -84,6 +85,7 @@
             id="search-form"
             name="search-form"
             autocomplete="on"
+            placeholder="Search"
           />
           <span class="header__search-form-text label-content">Search</span>
           <img
@@ -96,14 +98,14 @@
         <button
           class="header__button first-type-button"
           type="button"
-          aria-label="Upload"
+          aria-label="Upload button"
         >
           Upload
         </button>
         <button
           class="header__button second-type-button"
           type="button"
-          aria-label="Connect Wallet"
+          aria-label="Connect Wallet button"
         >
           Connect Wallet
         </button>
@@ -126,7 +128,7 @@
                 Digital marketplace for crypto collectibles and non-fungible
                 tokens (NFTs). Buy, Sell, and discover exclusive digital assets.
               </p>
-              <button class="banner__button first-type-button" type="button">
+              <button class="banner__button first-type-button" type="button" aria-label="Explore Now button">
                 Explore Now
               </button>
               <div class="banner__statistic">
@@ -175,7 +177,7 @@
                     <p class="banner__auction-info-title">Current Bid</p>
                     <div class="bid-count-info">
                       <img
-                        src="./src/assets/icons/bid.svg"
+                        src="./src/assets/icons/bid-white-icon.svg"
                         alt="Bid icon"
                         class="bid-count-info__img"
                       />
@@ -282,7 +284,11 @@
               <div class="top-collections__best-nft-bid-info">
                 <p class="top-collections__best-nft-bid-title">Highest Bid</p>
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-grey-icon.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
               </div>
@@ -316,6 +322,7 @@
                 <button
                   class="top-collections__other-nft-button second-type-button"
                   type="button"
+                  aria-label="Place a bid button"
                 >
                   Place a bid
                 </button>
@@ -348,6 +355,7 @@
                 <button
                   class="top-collections__other-nft-button second-type-button"
                   type="button"
+                  aria-label="Place a bid button"
                 >
                   Place a bid
                 </button>
@@ -380,6 +388,7 @@
                 <button
                   class="top-collections__other-nft-button second-type-button"
                   type="button"
+                  aria-label="Place a bid button"
                 >
                   Place a bid
                 </button>
@@ -569,6 +578,7 @@
                   <button
                     class="collection__button second-type-button"
                     type="button"
+                    aria-label="Watch Total 54 Items button"
                   >
                     Total 54 Items
                   </button>
@@ -616,6 +626,7 @@
                   <button
                     class="collection__button second-type-button"
                     type="button"
+                    aria-label="Watch Total 54 Items button"
                   >
                     Total 54 Items
                   </button>
@@ -663,6 +674,7 @@
                   <button
                     class="collection__button second-type-button"
                     type="button"
+                    aria-label="Watch Total 54 Items button"
                   >
                     Total 54 Items
                   </button>
@@ -677,14 +689,26 @@
           <div class="sign-up__images">
             <div class="sign-up__left-images">
               <div class="sign-up__img-box">
-                <img src="./src/assets/images/sign-up-nft-1.png" alt="Sign up image" class="sign-up__img" />
+                <img
+                  src="./src/assets/images/sign-up-nft-1.png"
+                  alt="Sign up image"
+                  class="sign-up__img"
+                />
               </div>
               <div class="sign-up__img-box">
-                <img src="./src/assets/images/sign-up-nft-2.png" alt="Sign up image" class="sign-up__img" />
+                <img
+                  src="./src/assets/images/sign-up-nft-2.png"
+                  alt="Sign up image"
+                  class="sign-up__img"
+                />
               </div>
             </div>
             <div class="sign-up__img-box">
-              <img src="./src/assets/images/sign-up-nft-3.png" alt="Sign up image" class="sign-up__img" />
+              <img
+                src="./src/assets/images/sign-up-nft-3.png"
+                alt="Sign up image"
+                class="sign-up__img"
+              />
             </div>
           </div>
           <div class="sign-up__content">
@@ -696,7 +720,7 @@
               consectetur pretium diam ut. Pellentesque eu sit blandit fringilla
               risus faucibus.
             </p>
-            <button class="first-type-button" type="button">Sign Up Now</button>
+            <button class="first-type-button" type="button" aria-label="Sign up button">Sign Up Now</button>
           </div>
         </div>
       </section>
@@ -710,105 +734,126 @@
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Nft category selection panel"
                 checked
               />
+              <label class="categories-radio-label" for="radio-all-categories" aria-label="Select all Categories">
+                <span>All Categories</span></label
+              >
               <input
                 id="radio-art"
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Select Art category"
               />
+              <label class="categories-radio-label" for="radio-art"
+                ><span>Art</span></label
+              >
               <input
                 id="radio-celebrities"
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Select Celebrities category"
               />
+              <label class="categories-radio-label" for="radio-celebrities"
+                ><span>Celebrities</span></label
+              >
               <input
                 id="radio-gaming"
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Select Gaming category"
               />
+              <label class="categories-radio-label" for="radio-gaming"
+                ><span>Gaming</span></label
+              >
               <input
                 id="radio-sport"
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Select Sport category"
               />
+              <label class="categories-radio-label" for="radio-sport"
+                ><span>Sport</span></label
+              >
               <input
                 id="radio-music"
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Select Music category"
               />
+              <label class="categories-radio-label" for="radio-music"
+                ><span>Music</span></label
+              >
               <input
                 id="radio-crypto"
                 class="categories-radio"
                 type="radio"
                 name="categories-choice"
+                aria-label="Select Crypto category"
               />
-
-              <div class="discover__categories-labels">
-                <label class="categories-radio-label" for="radio-all-categories"
-                  >All Categories</label
-                >
-                <label class="categories-radio-label" for="radio-art"
-                  >Art</label
-                >
-                <label class="categories-radio-label" for="radio-celebrities"
-                  >Celebrities</label
-                >
-                <label class="categories-radio-label" for="radio-gaming"
-                  >Gaming</label
-                >
-                <label class="categories-radio-label" for="radio-sport"
-                  >Sport</label
-                >
-                <label class="categories-radio-label" for="radio-music"
-                  >Music</label
-                >
-                <label class="categories-radio-label" for="radio-crypto"
-                  >Crypto</label
-                >
-              </div>
+              <label class="categories-radio-label" for="radio-crypto"
+                ><span>Crypto</span></label
+              >
             </div>
             <div class="discover__filter">
-              <img src="" alt="Filter icon" class="discover__filter-img" />
-              <select id="filter" name="filter" class="discover__filter-types">
-                <option value="filter">Filter</option>
+              <img
+                src="./src/assets/icons/filter-results-icon.svg"
+                alt="Filter icon"
+                class="discover__filter-img"
+              />
+              <select id="filter" name="filter" class="discover__filter-types" aria-label="Nft filter selection">
+                <option value="filter">All Filters</option>
+                <option value="filter">Filter 1</option>
+                <option value="filter">Filter 2</option>
+                <option value="filter">Filter 3</option>
               </select>
             </div>
           </div>
           <div class="discover__nfts-box">
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-1.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">ArtCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -828,37 +873,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-2.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">This NFT</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -878,37 +935,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-3.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">NameCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -928,37 +997,50 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-4.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
+
               <h4 class="discover__nft-title">KingCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -978,37 +1060,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-1.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">ArtCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1028,37 +1122,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-2.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">This NFT</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1078,37 +1184,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-3.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">NameCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1128,37 +1246,50 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-4.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
+
               <h4 class="discover__nft-title">KingCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1178,37 +1309,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-1.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">ArtCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1228,37 +1371,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-2.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">This NFT</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1278,37 +1433,49 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-3.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
               <h4 class="discover__nft-title">NameCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1328,37 +1495,50 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
             <div class="discover__nft">
-              <img src="" alt="NFT image" class="discover__nft-img" />
-              <div class="discover__nft-followers-list">
+              <div class="discover__nft-img-box">
                 <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
+                  src="./src/assets/images/discover-nft-4.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
                 />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
-                <img
-                  src=""
-                  alt="Follower avatar"
-                  class="discover__nft-follower"
-                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
               </div>
+
               <h4 class="discover__nft-title">KingCrypto</h4>
               <div class="discover__nft-info">
                 <div class="bid-count-info">
-                  <img src="" alt="Bid icon" class="bid-count-info__img" />
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
                   <span class="bid-count-info__number">0.25 ETH</span>
                 </div>
                 <p class="discover__nft-count">1 of 321</p>
@@ -1378,15 +1558,268 @@
                     >s left</span
                   >
                 </p>
-                <button type="button">Place a bid</button>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
+              </div>
+            </div>
+            <div class="discover__nft">
+              <div class="discover__nft-img-box">
+                <img
+                  src="./src/assets/images/discover-nft-1.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
+                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
+              </div>
+              <h4 class="discover__nft-title">ArtCrypto</h4>
+              <div class="discover__nft-info">
+                <div class="bid-count-info">
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
+                  <span class="bid-count-info__number">0.25 ETH</span>
+                </div>
+                <p class="discover__nft-count">1 of 321</p>
+              </div>
+              <div class="discover__nft-auction-info">
+                <p class="discover__nft-auction-timer">
+                  3
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >h</span
+                  >
+                  50
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >m</span
+                  >
+                  2
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >s left</span
+                  >
+                </p>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
+              </div>
+            </div>
+            <div class="discover__nft">
+              <div class="discover__nft-img-box">
+                <img
+                  src="./src/assets/images/discover-nft-2.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
+                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
+              </div>
+              <h4 class="discover__nft-title">This NFT</h4>
+              <div class="discover__nft-info">
+                <div class="bid-count-info">
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
+                  <span class="bid-count-info__number">0.25 ETH</span>
+                </div>
+                <p class="discover__nft-count">1 of 321</p>
+              </div>
+              <div class="discover__nft-auction-info">
+                <p class="discover__nft-auction-timer">
+                  3
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >h</span
+                  >
+                  50
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >m</span
+                  >
+                  2
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >s left</span
+                  >
+                </p>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
+              </div>
+            </div>
+            <div class="discover__nft">
+              <div class="discover__nft-img-box">
+                <img
+                  src="./src/assets/images/discover-nft-3.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
+                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
+              </div>
+              <h4 class="discover__nft-title">NameCrypto</h4>
+              <div class="discover__nft-info">
+                <div class="bid-count-info">
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
+                  <span class="bid-count-info__number">0.25 ETH</span>
+                </div>
+                <p class="discover__nft-count">1 of 321</p>
+              </div>
+              <div class="discover__nft-auction-info">
+                <p class="discover__nft-auction-timer">
+                  3
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >h</span
+                  >
+                  50
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >m</span
+                  >
+                  2
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >s left</span
+                  >
+                </p>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
+              </div>
+            </div>
+            <div class="discover__nft">
+              <div class="discover__nft-img-box">
+                <img
+                  src="./src/assets/images/discover-nft-4.png"
+                  alt="NFT image"
+                  class="discover__nft-img"
+                />
+                <div class="discover__nft-followers-list">
+                  <img
+                    src="./src/assets/icons/follower-1-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-2-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-3-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                  <img
+                    src="./src/assets/icons/follower-4-icon.svg"
+                    alt="Follower avatar"
+                    class="discover__nft-follower"
+                  />
+                </div>
+              </div>
+
+              <h4 class="discover__nft-title">KingCrypto</h4>
+              <div class="discover__nft-info">
+                <div class="bid-count-info">
+                  <img
+                    src="./src/assets/icons/bid-mini.svg"
+                    alt="Bid icon"
+                    class="bid-count-info__img"
+                  />
+                  <span class="bid-count-info__number">0.25 ETH</span>
+                </div>
+                <p class="discover__nft-count">1 of 321</p>
+              </div>
+              <div class="discover__nft-auction-info">
+                <p class="discover__nft-auction-timer">
+                  3
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >h</span
+                  >
+                  50
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >m</span
+                  >
+                  2
+                  <span class="discover__nft-auction-timer--font-weight-normal"
+                    >s left</span
+                  >
+                </p>
+                <button class="third-type-button" type="button">
+                  Place a bid
+                </button>
               </div>
             </div>
           </div>
-          <button type="button">More NFTs</button>
+          <button class="discover__button second-type-button" type="button" aria-label="Watch more nfts button">
+            More NFTs
+          </button>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
         <div class="footer__content">
           <div class="footer__website-info">
@@ -1397,9 +1830,27 @@
               discover exclusive digital items.
             </p>
             <address class="footer__social-icons">
-              <img src="" alt="Social icon" class="footer__social-icon" />
-              <img src="" alt="Social icon" class="footer__social-icon" />
-              <img src="" alt="Social icon" class="footer__social-icon" />
+              <a class="footer__icon-link" href="#">
+                <img
+                  src="./src/assets/icons/facebook.svg"
+                  alt="Facebook social icon "
+                  class="footer__social-icon"
+                />
+              </a>
+              <a class="footer__icon-link" href="#">
+                <img
+                  src="./src/assets/icons/twitter.svg"
+                  alt="Twitter social icon"
+                  class="footer__social-icon"
+                />
+              </a>
+              <a class="footer__icon-link" href="#">
+                <img
+                  src="./src/assets/icons/linkedin.svg"
+                  alt="Linkedin social icon"
+                  class="footer__social-icon"
+                />
+              </a>
             </address>
           </div>
           <div class="footer__navigations">
@@ -1512,13 +1963,20 @@
               <label
                 class="footer__subscribe-label form-label"
                 for="subscribe-form-input"
+                aria-label="Subscribe form"
               >
                 <input
                   class="footer__subscribe-input form-input"
                   id="subscribe-form-input"
                   type="email"
+                  placeholder="Enter your email address.."
+                  autocomplete="on"
                 />
-                <button class="first-type-button" type="submit">
+                <button
+                  class="footer__subscribe-button first-type-button"
+                  type="submit"
+                  aria-label="Subscribe Now button"
+                >
                   Subscribe Now
                 </button>
                 <span class="footer__subscribe-form-text label-content"

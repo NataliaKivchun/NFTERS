@@ -1,0 +1,11 @@
+.third-type-button {
+    padding: 0;
+    @include font-weight-font-size(500, 1rem);
+    color: $blueviolet;
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.1);
+        color: $red;
+    }
+ }
+

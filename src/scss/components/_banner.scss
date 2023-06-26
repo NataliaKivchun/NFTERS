@@ -53,6 +53,12 @@
     display: flex;
     column-gap: 0.5rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: $mobile-portrait-screen-mini) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
   }
 
   &__statistic-item-number {
@@ -172,24 +178,3 @@
     z-index: 2;
   }
 }
-
-/*
-.banner__auction-content {
-}
-.banner
-.banner
-.banner__auction-item-title {
-}
-.banner
-.banner__auction-item-author-avatar {
-}
-.banner__auction-item-author-name {
-}
-.banner__auction-info-panel {
-}
-.banner__auction-info {
-}
-.banner__auction-info-title {
-}
-.banner__auction-info-number--font-weight-normal {
-}*/

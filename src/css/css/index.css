@@ -1,9 +1,9 @@
-.banner__statistic-item-number, .header__logo-text, h2, h1 {
+.footer__logo-text, .banner__statistic-item-number, .header__logo-text, h2, h1 {
   text-transform: uppercase;
   font-family: "Rowdies", sans-serif;
 }
 
-.header__drop-menu-btn:focus ~ .header__drop-menu-label, .header__menu-burger-btn:focus ~ .header__menu-burger-label, a:focus, input:focus, button:focus {
+.footer__subscribe-label:has(.form-input:focus), .categories-radio:focus + .categories-radio-label, .discover__filter:has(select:focus), .header__drop-menu-btn:focus ~ .header__drop-menu-label, .header__menu-burger-btn:focus ~ .header__menu-burger-label, select:focus, a:focus, input:focus, button:focus {
   outline: 2px solid black;
   outline-offset: 3px;
 }
@@ -69,9 +69,26 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 address {
   font-style: normal;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+select:focus {
+  outline-color: transparent;
 }
 
 html {
@@ -135,8 +152,13 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .container {
-  padding: 0 25px;
+  padding: 0 15px;
   margin: 0 auto;
+}
+@media (min-width: 352px) {
+  .container {
+    padding: 0 25px;
+  }
 }
 @media (min-width: 1281px) {
   .container {
@@ -149,6 +171,9 @@ input[type=search]::-webkit-search-cancel-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   position: relative;
   border: 2px solid #757575;
@@ -156,6 +181,8 @@ input[type=search]::-webkit-search-cancel-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .form-input {
@@ -166,9 +193,73 @@ input[type=search]::-webkit-search-cancel-button {
   color: #757575;
   border-radius: 100px;
 }
-.form-input:focus ~ .label-content {
+.form-input::-webkit-input-placeholder {
+  color: #757575;
+  font-size: 90%;
+}
+.form-input::-moz-placeholder {
+  color: #757575;
+  font-size: 90%;
+}
+.form-input:-ms-input-placeholder {
+  color: #757575;
+  font-size: 90%;
+}
+.form-input::-ms-input-placeholder {
+  color: #757575;
+  font-size: 90%;
+}
+.form-input::placeholder {
+  color: #757575;
+  font-size: 90%;
+}
+.form-input:focus::-webkit-input-placeholder {
   visibility: hidden;
-  background-color: transparent;
+}
+.form-input:focus::-moz-placeholder {
+  visibility: hidden;
+}
+.form-input:focus:-ms-input-placeholder {
+  visibility: hidden;
+}
+.form-input:focus::-ms-input-placeholder {
+  visibility: hidden;
+}
+.form-input:focus::placeholder {
+  visibility: hidden;
+}
+.form-input:-moz-placeholder-shown {
+  visibility: visible;
+}
+.form-input:-ms-input-placeholder {
+  visibility: visible;
+}
+.form-input:placeholder-shown {
+  visibility: visible;
+}
+.form-input:-moz-placeholder-shown:focus ~ .label-content, .form-input:not(:-moz-placeholder-shown) ~ .label-content {
+  top: -7px;
+  opacity: 1;
+  font-size: 85%;
+  color: #3d00b7;
+  visibility: visible;
+  font-weight: 500;
+}
+.form-input:-ms-input-placeholder:focus ~ .label-content, .form-input:not(:-ms-input-placeholder) ~ .label-content {
+  top: -7px;
+  opacity: 1;
+  font-size: 85%;
+  color: #3d00b7;
+  visibility: visible;
+  font-weight: 500;
+}
+.form-input:placeholder-shown:focus ~ .label-content, .form-input:not(:placeholder-shown) ~ .label-content {
+  top: -7px;
+  opacity: 1;
+  font-size: 85%;
+  color: #3d00b7;
+  visibility: visible;
+  font-weight: 500;
 }
 
 .first-type-button {
@@ -191,7 +282,7 @@ input[type=search]::-webkit-search-cancel-button {
 .second-type-button {
   padding: 0.88rem 2rem;
   color: #3d00b7;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid #3d00b7;
   border-radius: 60px;
   -webkit-transition: 0.3s;
@@ -204,12 +295,30 @@ input[type=search]::-webkit-search-cancel-button {
           box-shadow: 0 0 2px 2px #3d00b7;
 }
 
+.third-type-button {
+  padding: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #371c87;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.third-type-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #ff002e;
+}
+
 .label-content {
   position: absolute;
-  background: transparent;
+  background: white;
   top: calc(50% - 0.6rem);
-  left: 2rem;
+  left: 1.5rem;
   color: #757575;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+  padding: 0 5px;
 }
 
 .header {
@@ -255,8 +364,18 @@ input[type=search]::-webkit-search-cancel-button {
 }
 .header__logo-text {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #3d00b7;
+}
+@media (min-width: 414px) {
+  .header__logo-text {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 885px) {
+  .header__logo-text {
+    font-size: 2.5rem;
+  }
 }
 .header__navigation {
   -webkit-box-flex: 0;
@@ -274,6 +393,11 @@ input[type=search]::-webkit-search-cancel-button {
 .header__menu-burger-btn {
   opacity: 0;
   position: absolute;
+}
+@media (min-width: 1060px) {
+  .header__menu-burger-btn {
+    display: none;
+  }
 }
 .header__menu-burger-label {
   position: relative;
@@ -323,6 +447,10 @@ input[type=search]::-webkit-search-cancel-button {
             column-gap: 8%;
   }
 }
+.header__navigation-list-link {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 .header__navigation-list-link:hover {
   border-bottom: 2px solid #3d00b7;
 }
@@ -338,6 +466,11 @@ input[type=search]::-webkit-search-cancel-button {
 .header__drop-menu-btn {
   opacity: 0;
   position: absolute;
+}
+@media (min-width: 885px) {
+  .header__drop-menu-btn {
+    display: none;
+  }
 }
 .header__search-form-label {
   display: none;
@@ -464,6 +597,20 @@ input[type=search]::-webkit-search-cancel-button {
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
   margin-top: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 352px) {
+  .banner__statistic {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .banner__statistic-item-number {
   font-weight: 700;
@@ -593,26 +740,6 @@ input[type=search]::-webkit-search-cancel-button {
   z-index: 2;
 }
 
-/*
-.banner__auction-content {
-}
-.banner
-.banner
-.banner__auction-item-title {
-}
-.banner
-.banner__auction-item-author-avatar {
-}
-.banner__auction-item-author-name {
-}
-.banner__auction-info-panel {
-}
-.banner__auction-info {
-}
-.banner__auction-info-title {
-}
-.banner__auction-info-number--font-weight-normal {
-}*/
 .amazing .container {
   display: grid;
   row-gap: 3rem;
@@ -727,6 +854,9 @@ input[type=search]::-webkit-search-cancel-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     row-gap: 2rem;
   }
 }
@@ -744,15 +874,32 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 .top-collections__best-nft-info {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+@media (min-width: 352px) {
+  .top-collections__best-nft-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
+  }
 }
 @media (min-width: 414px) {
   .top-collections__best-nft-info {
@@ -769,6 +916,16 @@ input[type=search]::-webkit-search-cancel-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .top-collections__best-nft-info {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -853,12 +1010,25 @@ input[type=search]::-webkit-search-cancel-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 352px) {
+  .top-collections__other-nft {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    row-gap: 1.25rem;
+  }
 }
 .top-collections__other-nft-image {
   max-width: 35%;
@@ -872,6 +1042,18 @@ input[type=search]::-webkit-search-cancel-button {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.75rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+@media (min-width: 352px) {
+  .top-collections__other-nft-info {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0;
+  }
 }
 .top-collections__other-nft-about {
   display: -webkit-box;
@@ -966,17 +1148,30 @@ input[type=search]::-webkit-search-cancel-button {
   font-weight: 700;
   font-size: 1.5rem;
 }
-.top-collections__top-item > .top-collections__top-item-img-box {
-  padding: 0 1rem;
-}
 .top-collections__top-item:first-child > .top-collections__top-item-img-box {
-  padding-left: 1.15rem;
+  padding-left: 1.3rem;
   position: relative;
   z-index: 3;
+  width: 35%;
+}
+@media (min-width: 352px) {
+  .top-collections__top-item:first-child > .top-collections__top-item-img-box {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 1.15rem;
+  }
 }
 .top-collections__top-item:nth-child(4) > .top-collections__top-item-img-box {
   position: relative;
   z-index: 3;
+}
+.top-collections__top-item-img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1rem;
+  width: 32%;
 }
 .top-collections__top-item-img-box::before {
   content: url(../../assets/icons/verify-top-icon.svg);
@@ -984,11 +1179,19 @@ input[type=search]::-webkit-search-cancel-button {
   width: 27px;
   height: 27px;
   z-index: 4;
-  top: 0;
+  top: -10px;
   right: 1rem;
+}
+@media (min-width: 352px) {
+  .top-collections__top-item-img-box {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .top-collections__top-item-title {
   padding-bottom: 0.5rem;
+  font-size: 0.88rem;
 }
 .top-collections__top-item-title ~ .bid-count-info .bid-count-info__number {
   color: #3a3a3a;
@@ -998,10 +1201,21 @@ input[type=search]::-webkit-search-cancel-button {
 .top-collections__top-item-title ~ .bid-count-info .bid-count-info__img {
   color: black;
 }
+@media (min-width: 352px) {
+  .top-collections__top-item-title {
+    font-size: 1rem;
+  }
+}
 .top-collections__top-item-statistics {
   margin-left: auto;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 0.88rem;
+}
+@media (min-width: 352px) {
+  .top-collections__top-item-statistics {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
 }
 
 .positive-statistics {
@@ -1185,4 +1399,445 @@ input[type=search]::-webkit-search-cancel-button {
   font-weight: 400;
   font-size: 1.13rem;
   line-height: 1.6;
+}
+
+.discover .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.discover__title {
+  font-size: 2.13rem;
+  text-align: center;
+}
+@media (min-width: 885px) {
+  .discover__title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+.discover__sort {
+  margin-top: 2.37rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+}
+@media (min-width: 885px) {
+  .discover__sort {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.discover__categories-sort {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .discover__categories-sort {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+.discover__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #371c87;
+  background-color: #dcdcdc;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+.discover__filter:hover {
+  -webkit-box-shadow: 0 0 2px 2px #3d00b7;
+          box-shadow: 0 0 2px 2px #3d00b7;
+}
+.discover__nfts-box {
+  padding: 2rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minMax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.discover__nft {
+  border: 0.5px solid #dcdcdc;
+  border-radius: 10px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.discover__nft:hover {
+  -webkit-box-shadow: 0 0 2px 3px #dcdcdc;
+          box-shadow: 0 0 2px 3px #dcdcdc;
+}
+.discover__nft-img-box {
+  position: relative;
+}
+.discover__nft-followers-list {
+  position: relative;
+  bottom: 20px;
+  left: 15px;
+}
+.discover__nft-follower {
+  position: absolute;
+  left: 0;
+}
+.discover__nft-follower:nth-child(2) {
+  left: 23px;
+}
+.discover__nft-follower:nth-child(3) {
+  left: 46px;
+}
+.discover__nft-follower:nth-child(4) {
+  left: 69px;
+}
+.discover__nft-title {
+  margin-top: 20px;
+}
+.discover__nft-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+.discover__nft-info .bid-count-info {
+  color: #00ac4f;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 5px;
+}
+.discover__nft-count {
+  color: #757575;
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+.discover__nft-auction-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-top: 10px;
+  border-top: 1px solid #dcdcdc;
+}
+.discover__nft-auction-timer {
+  color: #371c87;
+  background-color: #dcdcdc;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+}
+.discover__nft-auction-timer--font-weight-normal {
+  font-weight: 500;
+}
+.discover__button {
+  font-size: 1.25rem;
+}
+
+.categories-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.categories-radio:checked + .categories-radio-label {
+  background-color: #3d00b7;
+  color: white;
+}
+
+.categories-radio-label {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: black;
+  background-color: #dcdcdc;
+  border-radius: 100px;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.categories-radio-label:hover {
+  -webkit-box-shadow: 0 0 2px 2px #3d00b7;
+          box-shadow: 0 0 2px 2px #3d00b7;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.footer__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(33, 1fr);
+  text-align: left;
+  padding: 3rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 1060px) {
+  .footer__content {
+    padding: 5rem 0 4.3rem;
+  }
+}
+.footer__website-info {
+  grid-column: span 33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.9rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 1060px) {
+  .footer__website-info {
+    grid-column: span 11;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.footer__logo-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.footer__website-description, .footer__subscribe-description {
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: #757575;
+}
+.footer__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__navigations {
+  grid-column: span 33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+@media (min-width: 768px) {
+  .footer__navigations {
+    grid-column: span 16;
+  }
+}
+@media (min-width: 1060px) {
+  .footer__navigations {
+    grid-column: span 10;
+  }
+}
+.footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.footer__navigation-title, .footer__subscribe-title {
+  font-size: 1.13rem;
+}
+.footer__navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7rem;
+}
+.footer__navigation-list-link {
+  color: #3a3a3a;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+.footer__navigation-list-link:hover {
+  border-bottom: 2px solid #3d00b7;
+}
+.footer__subscribe {
+  grid-column: span 33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.9rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .footer__subscribe {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    grid-column: span 17;
+    text-align: left;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1060px) {
+  .footer__subscribe {
+    grid-column: span 12;
+  }
+}
+.footer__subscribe-description {
+  color: #3a3a3a;
+}
+.footer__subscribe-form {
+  width: 95%;
+}
+.footer__subscribe-label {
+  font-size: 0.88rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 7.5rem;
+}
+@media (min-width: 352px) {
+  .footer__subscribe-label {
+    padding-right: 8.5rem;
+  }
+}
+@media (min-width: 414px) {
+  .footer__subscribe-label {
+    padding-right: 9.5rem;
+  }
+}
+@media (min-width: 1060px) {
+  .footer__subscribe-label {
+    padding-right: 10.3rem;
+  }
+}
+.footer__subscribe-input {
+  margin: 0.5rem 0;
+}
+.footer__subscribe-input:focus {
+  outline-color: transparent;
+}
+.footer__subscribe-button {
+  position: absolute;
+  right: 0.5rem;
+  padding: 0.7rem 0.7rem;
+}
+@media (min-width: 352px) {
+  .footer__subscribe-button {
+    padding: 0.88rem 0.88rem;
+  }
+}
+@media (min-width: 414px) {
+  .footer__subscribe-button {
+    padding: 0.88rem 1.5rem;
+  }
+}
+@media (min-width: 1060px) {
+  .footer__subscribe-button {
+    padding: 0.88rem 2rem;
+  }
+}
+.footer__copyright {
+  width: 100%;
+  padding: 1rem 0 1.5rem;
+  border-top: 1px solid #dcdcdc;
+  color: #757575;
+  font-weight: 400;
+  font-size: 0.88rem;
 }

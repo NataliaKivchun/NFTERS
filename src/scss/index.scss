@@ -5,6 +5,7 @@
 @import "templates/large-text";
 @import "templates/elem-outline";
 @import "mixins/font-weight-font-size";
+@import "mixins/gray-background";
 @import "config/reset";
 @import "config/config";
 @import "shared/container";
@@ -12,6 +13,7 @@
 @import "shared/form-input";
 @import "shared/first-type-button";
 @import "shared/second-type-button";
+@import "shared/third_type_button";
 @import "shared/label-content";
 @import "components/header";
 @import "components/bid-count-info";
@@ -20,3 +22,5 @@
 @import "components/top-collections";
 @import "components/collection";
 @import "components/sign-up";
+@import "components/discover";
+@import "components/footer";

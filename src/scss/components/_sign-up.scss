@@ -33,13 +33,13 @@
     position: relative;
     &:first-child::after {
       position: absolute;
-      content: url(../../assets/icons/sign-up-avatar-1.svg);
+      content: url(../assets/icons/sign-up-avatar-1.svg);
       bottom: -40px;
       right: -40px;
     }
     &:last-child::after {
       position: absolute;
-      content: url(../../assets/icons/sign-up-avatar-2.svg);
+      content: url(../assets/icons/sign-up-avatar-2.svg);
       bottom: -40px;
       right: -40px;
     }
